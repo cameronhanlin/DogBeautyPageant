@@ -13,6 +13,8 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web:2.1.3.RELEASE'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:2.1.3.RELEASE'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 }
 
 test {

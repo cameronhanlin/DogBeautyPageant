@@ -6,7 +6,9 @@
 </head>
 <body>
     <div th:each="currentDog : ${firstRowDog}">
+        <a th:href="'/secondRowDog/' + ${currentDog.place}">
         <img th:src="${currentDog.url}" width="400" height="400"/>
+        </a>
 
     </div>
 </body>

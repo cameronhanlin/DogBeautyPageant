@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:each="thirdDog : ${thirdRowDog}">
+    <a th:href="'/finaloutput/' + ${thirdDog.place}">
+        <img th:src="${thirdDog.url}" width="400" height="400"/>
+    </a>
+</div>
+</body>
+</html>
