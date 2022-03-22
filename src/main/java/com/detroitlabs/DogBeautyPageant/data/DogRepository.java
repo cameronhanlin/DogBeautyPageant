@@ -17,6 +17,7 @@ public class DogRepository {
             dogService.fetchDogModel(),
             dogService.fetchDogModel());
 
+
     /*public DogRepository(){
         dogRepository.add(dogService.fetchDogModel());
         dogRepository.add(dogService.fetchDogModel());
