@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-    <div th:each="currentDog : ${fiveDogModels}">
+    <div th:each="currentDog : ${firstRowDog}">
         <img th:src="${currentDog.url}" width="400" height="400"/>
 
     </div>

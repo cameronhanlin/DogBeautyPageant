@@ -4,28 +4,26 @@ import com.detroitlabs.DogBeautyPageant.model.DogModel;
 import com.detroitlabs.DogBeautyPageant.service.DogService;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class DogRepository {
 
     private DogService dogService = new DogService();
-    private List<DogModel> dogRepository = Arrays.asList(
-            dogService.fetchDogModel(),
-            dogService.fetchDogModel(),
-            dogService.fetchDogModel(),
-            dogService.fetchDogModel(),
-            dogService.fetchDogModel());
+    private ArrayList<ArrayList<DogModel>> dogRepository = new ArrayList<>();
 
-    /*public DogRepository(){
-        dogRepository.add(dogService.fetchDogModel());
-        dogRepository.add(dogService.fetchDogModel());
+
+    public DogRepository() {
+
+        for (int i = 0; i < 3; i++) {
+            ArrayList<DogModel> choices = new ArrayList<>();
+            for (int j = 0; j < 3; j++) {
+                choices.add(dogService.fetchDogModel());
+            }
+            dogRepository.add(choices);
+        }
     }
 
-     */
-
-
-    public List<DogModel> getDogRepository(){
+    public ArrayList<ArrayList<DogModel>> getDogRepository() {
         return dogRepository;
     }
 

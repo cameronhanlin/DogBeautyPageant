@@ -15,7 +15,7 @@ public class DogController {
     @RequestMapping("/")
     public String displayDog(ModelMap modelMap){
         //DogModel dogModel = dogService.fetchDogModel();
-        modelMap.put("fiveDogModels", dogRepository.getDogRepository());
+        modelMap.put("firstRowDog", dogRepository.getDogRepository().get(1));
         return "home";
     }
 
